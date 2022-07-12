@@ -1,0 +1,16 @@
+compatibility_date = "2022-07-12"
+
+main = "./src/index.mjs"
+
+name = "liberate-the-hostname"
+
+kv_namespaces = [
+    { binding = "KV", id = "e4d11a2c9f7046299d763ceb86f234f8" }
+]
+
+routes = [
+    { pattern = "*", zone_name = "ssl-for-saas.cf" }
+]
+
+[triggers]
+crons = [ "* * * * *" ]
