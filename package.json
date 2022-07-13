@@ -2,7 +2,7 @@
   "name": "liberate-the-hostname",
   "version": "2.0.0",
   "scripts": {
-    "prebuild": "npx tailwindcss -i ./src/index.css -o ./public/index.css",
+    "prebuild": "npx tailwindcss -i ./src/index.css -o ./public/index.css --minify",
     "watch": "npx tailwindcss -i ./src/index.css -o ./public/index.css --watch"
   },
   "devDependencies": {
