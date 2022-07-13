@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-200">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liberate the Hostname</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+	<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto flex flex-col my-4 space-y-4">
+			<div class="bg-white overflow-hidden shadow sm:rounded-lg">
+				<div class="px-4 py-5 sm:px-6">
+					<h1 class="text-lg font-semibold">Liberate the Hostname. In 3 easy steps.</h1>
+					<div class="mt-4">
+						<ul class="space-y-3">
+							<li class="flex items-center">
+								<svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<circle cx="12" cy="12" r="11" />
+									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+								</svg>
+								<p class="ml-4">
+									Type your hostname that is being held here.
+								</p>
+							</li>
+							<li class="flex items-center">
+								<svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<circle cx="12" cy="12" r="11" />
+									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+								</svg>
+								<p class="ml-4">
+									Validate the hostname by adding a couple of DNS records to your zone.
+								</p>
+							</li>
+							<li class="flex items-center">
+								<svg class="h-6 w-6 flex-none fill-orange-100 stroke-orange-500 stroke-2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<circle cx="12" cy="12" r="11" />
+									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+								</svg>
+								<p class="ml-4">
+									Once the Custome Hostname has been verified it will be deleted after a couple minutes and your domain
+									will be free. Success.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bg-slate-50 px-4 py-5 sm:p-6">
+					<form id="submit">
+						<label for="submit-hostname" class="block text-sm font-medium text-slate-700">Hostname</label>
+						<div class="mt-1 flex rounded-md shadow-sm">
+							<div class="relative flex items-stretch flex-grow focus-within:z-10">
+								<input type="text" name="text" id="submit-hostname"
+									class="focus:ring-orange-500 focus:border-orange-500 block w-full rounded-none rounded-l-md sm:text-sm border-orange-300"
+									placeholder="example.com">
+							</div>
+							<button type="submit"
+								class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-orange-300 text-sm font-medium rounded-r-md text-orange-900 bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
+								<span>Submit</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="dns-section" class="hidden bg-white overflow-hidden shadow sm:rounded-lg">
+				<div class="px-4 py-5 sm:px-6">
+					<h2 class="font-semibold">Add these DNS records.</h2>
+				</div>
+				<div class="bg-slate-50 px-4 py-5 sm:p-6">
+					<p>Type <code class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm">CNAME</code>,
+						name <code class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm"
+							id="cname-name"></code>,
+						value <code
+							class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm">fallback.ssl-for-saas.cf</code>.
+					</p>
+					<p>Type <code class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm">TXT</code>,
+						name <code class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm"
+							id="txt-name"></code>,
+						value <code class="text-sm font-bold text-orange-900 bg-orange-100 p-1 rounded-sm"
+							id="txt-value"></code>.
+					</p>
+				</div>
+			</div>
+			<div class="bg-white overflow-hidden shadow sm:rounded-lg">
+				<div class="px-4 py-5 sm:px-6">
+					<h2 class="font-semibold">Check the Hostname.</h2>
+					<p>
+						Wait for the Custom Hostname verification to complete. If you created the DNS records within the first few
+						minutes, verification should complete almost immediately. You can check the status here.
+					</p>
+				</div>
+				<div class="bg-slate-50 px-4 py-5 sm:p-6">
+					<form id="check">
+						<label for="submit-hostname" class="block text-sm font-medium text-slate-700">Hostname</label>
+						<div class="mt-1 flex rounded-md shadow-sm">
+							<div class="relative flex items-stretch flex-grow focus-within:z-10">
+								<input type="text" name="text" id="submit-hostname"
+									class="focus:ring-orange-500 focus:border-orange-500 block w-full rounded-none rounded-l-md sm:text-sm border-orange-300"
+									placeholder="example.com">
+							</div>
+							<button type="submit"
+								class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-orange-300 text-sm font-medium rounded-r-md text-orange-900 bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
+								<span>Check</span>
+							</button>
+						</div>
+					</form>
+					<p class="hidden mt-2" id="status"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('submit').addEventListener('submit', async (e) => {
+			e.preventDefault()
+			const hostname = document.getElementById('submit-hostname').value
+			const response = await fetch('/api/v1/submit', {
+				body: hostname,
+				method: 'POST'
+			})
+			const result = await response.json()
+			document.getElementById('cname-name').textContent = result.hostname
+			document.getElementById('txt-name').textContent = result.ownership_verification.name
+			document.getElementById('txt-value').textContent = result.ownership_verification.value
+			document.getElementById('dns-section').classList = 'bg-white overflow-hidden shadow sm:rounded-lg'
+		})
+		document.getElementById('check').addEventListener('submit', async (e) => {
+			e.preventDefault()
+			document.getElementById('status').classList = 'hidden mt-2'
+			const hostname = document.getElementById('check-hostname').value
+			const response = await fetch('/api/v1/check', {
+				body: hostname,
+				method: 'POST'
+			})
+			document.getElementById('status').textContent = await response.text()
+			document.getElementById('status').classList = 'mt-2'
+		})
+	</script>
+</body>
+
+</html>
