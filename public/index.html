@@ -129,6 +129,7 @@
 	<script type="text/javascript">
 		document.getElementById('submit').addEventListener('submit', async (e) => {
 			e.preventDefault()
+			document.getElementById('dns-section').classList.add('hidden')
 			const hostname = document.getElementById('submit-hostname').value
 			const response = await fetch('/api/v1/submit', {
 				body: hostname,
@@ -138,7 +139,7 @@
 			document.getElementById('cname-name').textContent = result.hostname
 			document.getElementById('txt-name').textContent = result.ownership_verification.name
 			document.getElementById('txt-value').textContent = result.ownership_verification.value
-			document.getElementById('dns-section').classList.toggle('hidden')
+			document.getElementById('dns-section').classList.remove('hidden')
 		})
 		document.getElementById('check').addEventListener('submit', async (e) => {
 			e.preventDefault()
