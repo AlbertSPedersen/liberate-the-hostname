@@ -142,14 +142,14 @@
 		})
 		document.getElementById('check').addEventListener('submit', async (e) => {
 			e.preventDefault()
-			document.getElementById('status').classList.toggle('hidden')
+			document.getElementById('status').classList.add('hidden')
 			const hostname = document.getElementById('check-hostname').value
 			const response = await fetch('/api/v1/check', {
 				body: hostname,
 				method: 'POST'
 			})
 			document.getElementById('status').textContent = await response.text()
-			document.getElementById('status').classList.toggle('hidden')
+			document.getElementById('status').classList.remove('hidden')
 		})
 	</script>
 </body>
