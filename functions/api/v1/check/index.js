@@ -2,7 +2,7 @@ export async function onRequestPost({
   env,
   request
 }) {
-  const hostname = await request.text()
+  const hostname = (await request.text()).toLowerCase()
   const urlSearchParams = new URLSearchParams({
     'per_page': 1,
     'hostname': hostname

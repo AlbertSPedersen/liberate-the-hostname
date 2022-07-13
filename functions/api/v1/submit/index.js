@@ -2,7 +2,7 @@ export async function onRequestPost({
   env,
   request
 }) {
-  const hostname = await request.text()
+  const hostname = (await request.text()).toLowerCase()
   var response = await fetch(`https://api.cloudflare.com/client/v4/zones/${env.CLOUDFLARE_ZONE_ID}/custom_hostnames`, {
     body: JSON.stringify({
       hostname: hostname,
