@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-200">
+<html lang="en" class="bg-slate-200 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
 
 <head>
 	<meta charset="UTF-8">
@@ -22,13 +22,13 @@
 <body>
 	<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 		<div class="flex flex-col max-w-3xl mx-auto my-4 space-y-4">
-			<div class="overflow-hidden bg-white shadow sm:rounded-lg">
+			<div class="overflow-hidden bg-white shadow dark:bg-slate-700 sm:rounded-lg">
 				<div class="px-4 py-5 sm:px-6">
 					<h1 class="text-lg font-semibold">Liberate the Hostname. In 3 easy steps.</h1>
 					<div class="mt-4">
 						<ul class="space-y-3">
 							<li class="flex items-center">
-								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500" stroke-linecap="round"
+								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500 dark:fill-orange-900" stroke-linecap="round"
 									stroke-linejoin="round">
 									<circle cx="12" cy="12" r="11" />
 									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
@@ -38,7 +38,7 @@
 								</p>
 							</li>
 							<li class="flex items-center">
-								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500" stroke-linecap="round"
+								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500 dark:fill-orange-900" stroke-linecap="round"
 									stroke-linejoin="round">
 									<circle cx="12" cy="12" r="11" />
 									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
@@ -48,7 +48,7 @@
 								</p>
 							</li>
 							<li class="flex items-center">
-								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500" stroke-linecap="round"
+								<svg class="flex-none w-6 h-6 stroke-2 fill-orange-100 stroke-orange-500 dark:fill-orange-900" stroke-linecap="round"
 									stroke-linejoin="round">
 									<circle cx="12" cy="12" r="11" />
 									<path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
@@ -60,43 +60,43 @@
 						</ul>
 					</div>
 				</div>
-				<div class="px-4 py-5 bg-slate-50 sm:p-6">
+				<div class="px-4 py-5 bg-slate-50 dark:bg-slate-800 sm:p-6">
 					<form id="submit">
-						<label for="submit-hostname" class="block text-sm font-medium text-slate-700">Hostname</label>
+						<label for="submit-hostname" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Hostname</label>
 						<div class="flex mt-1 rounded-md shadow-sm">
 							<div class="relative flex items-stretch flex-grow focus-within:z-10">
 								<input type="text" name="text" id="submit-hostname"
-									class="block w-full border-orange-300 rounded-none focus:ring-orange-500 focus:border-orange-500 rounded-l-md sm:text-sm"
+									class="block w-full placeholder-orange-700 bg-white border-orange-300 rounded-none dark:placeholder-orange-100 dark:bg-slate-700 dark:border-transparent focus:ring-orange-500 focus:border-orange-500 rounded-l-md sm:text-sm"
 									placeholder="example.com">
 							</div>
 							<button type="submit"
-								class="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium text-orange-900 border border-orange-300 rounded-r-md bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
+							class="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium text-orange-900 border border-orange-300 dark:text-orange-100 dark:border-transparent rounded-r-md bg-orange-50 dark:bg-orange-900 hover:bg-orange-100 dark:hover:bg-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
 								<span>Submit</span>
 							</button>
 						</div>
 					</form>
 				</div>
 			</div>
-			<div id="dns-section" class="hidden overflow-hidden bg-white shadow sm:rounded-lg">
+			<div id="dns-section" class="hidden overflow-hidden bg-white shadow dark:bg-slate-700 sm:rounded-lg">
 				<div class="px-4 py-5 sm:px-6">
 					<h2 class="font-semibold">Add these DNS records.</h2>
 				</div>
-				<div class="px-4 py-5 bg-slate-50 sm:p-6">
-					<p>Type <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm">CNAME</code>,
-						name <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm"
+				<div class="px-4 py-5 bg-slate-50 dark:bg-slate-800 sm:p-6">
+					<p>Type <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100">CNAME</code>,
+						name <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100"
 							id="cname-name"></code>,
 						value <code
-							class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm">fallback.ssl-for-saas.cf</code>.
+							class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100">fallback.ssl-for-saas.cf</code>.
 					</p>
-					<p>Type <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm">TXT</code>,
-						name <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm"
+					<p>Type <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100">TXT</code>,
+						name <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100"
 							id="txt-name"></code>,
-						value <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm"
+						value <code class="p-1 text-sm font-bold text-orange-900 bg-orange-100 rounded-sm dark:bg-orange-900 dark:text-orange-100"
 							id="txt-value"></code>.
 					</p>
 				</div>
 			</div>
-			<div class="overflow-hidden bg-white shadow sm:rounded-lg">
+			<div class="overflow-hidden bg-white shadow dark:bg-slate-700 sm:rounded-lg">
 				<div class="px-4 py-5 sm:px-6">
 					<h2 class="font-semibold">Check the Hostname.</h2>
 					<p>
@@ -111,17 +111,17 @@
 						<li><strong>Liberated:</strong> The hostname has been successfully liberated. You can now point the hostname at your new provider.</li>
 					</ul>
 				</div>
-				<div class="px-4 py-5 bg-slate-50 sm:p-6">
+				<div class="px-4 py-5 bg-slate-50 dark:bg-slate-800 sm:p-6">
 					<form id="check">
-						<label for="check-hostname" class="block text-sm font-medium text-slate-700">Hostname</label>
+						<label for="check-hostname" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Hostname</label>
 						<div class="flex mt-1 rounded-md shadow-sm">
 							<div class="relative flex items-stretch flex-grow focus-within:z-10">
 								<input type="text" name="text" id="check-hostname"
-									class="block w-full border-orange-300 rounded-none focus:ring-orange-500 focus:border-orange-500 rounded-l-md sm:text-sm"
+									class="block w-full placeholder-orange-700 bg-white border-orange-300 rounded-none dark:placeholder-orange-100 dark:bg-slate-700 dark:border-transparent focus:ring-orange-500 focus:border-orange-500 rounded-l-md sm:text-sm"
 									placeholder="example.com">
 							</div>
 							<button type="submit"
-								class="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium text-orange-900 border border-orange-300 rounded-r-md bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
+								class="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium text-orange-900 border border-orange-300 dark:text-orange-100 dark:border-transparent rounded-r-md bg-orange-50 dark:bg-orange-900 hover:bg-orange-100 dark:hover:bg-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500">
 								<span>Check</span>
 							</button>
 						</div>
@@ -134,6 +134,7 @@
 	<script type="text/javascript">
 		document.getElementById('submit').addEventListener('submit', async (e) => {
 			e.preventDefault()
+			document.getElementById('dns-section').classList.add('hidden')
 			const hostname = document.getElementById('submit-hostname').value
 			const response = await fetch('/api/v1/submit', {
 				body: hostname,
@@ -143,18 +144,18 @@
 			document.getElementById('cname-name').textContent = result.hostname
 			document.getElementById('txt-name').textContent = result.ownership_verification.name
 			document.getElementById('txt-value').textContent = result.ownership_verification.value
-			document.getElementById('dns-section').classList = 'bg-white overflow-hidden shadow sm:rounded-lg'
+			document.getElementById('dns-section').classList.remove('hidden')
 		})
 		document.getElementById('check').addEventListener('submit', async (e) => {
 			e.preventDefault()
-			document.getElementById('status').classList = 'hidden mt-2'
+			document.getElementById('status').classList.add('hidden')
 			const hostname = document.getElementById('check-hostname').value
 			const response = await fetch('/api/v1/check', {
 				body: hostname,
 				method: 'POST'
 			})
 			document.getElementById('status').textContent = await response.text()
-			document.getElementById('status').classList = 'mt-2'
+			document.getElementById('status').classList.remove('hidden')
 		})
 	</script>
 </body>
